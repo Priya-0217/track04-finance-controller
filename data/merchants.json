@@ -1,0 +1,35 @@
+[
+  {
+    "merchant_id": "merch_001",
+    "business_name": "UrbanStore Electronics",
+    "contact_email": "finance@urbanstore.in",
+    "kyc_status": "verified",
+    "fee_tier": "enterprise_discount",
+    "custom_mdr_discount_pct": 0.25,
+    "settlement_cycle": "T+1",
+    "risk_rating": "low",
+    "active_disputes_count": 0
+  },
+  {
+    "merchant_id": "merch_002",
+    "business_name": "Nova Health Essentials",
+    "contact_email": "accounts@novahealth.com",
+    "kyc_status": "verified",
+    "fee_tier": "standard_retail",
+    "custom_mdr_discount_pct": 0.0,
+    "settlement_cycle": "T+2",
+    "risk_rating": "low",
+    "active_disputes_count": 1
+  },
+  {
+    "merchant_id": "merch_003",
+    "business_name": "Apex Cloud Solutions",
+    "contact_email": "billing@apexcloud.io",
+    "kyc_status": "verified",
+    "fee_tier": "saas_startup",
+    "custom_mdr_discount_pct": 0.1,
+    "settlement_cycle": "T+1",
+    "risk_rating": "medium",
+    "active_disputes_count": 0
+  }
+]

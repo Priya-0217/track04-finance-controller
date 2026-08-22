@@ -1,0 +1,107 @@
+txn_id,date,amount,merchant,description
+TXN1070,2026-10-09,6573.69,Om Traders,Card settlement batch 4
+TXN1023,2026-08-23,15983.96,Ganesh Sweets,NEFT settlement batch
+TXN1024,2026-08-24,6346.83,Nova Fashion Hub,Card settlement batch
+TXN1061,2026-09-30,13302.11,Local Mart,TXN1061 UPI settlement
+TXN1050,2026-09-19,28637.57,Local Mart,International Card settlement batch
+TXN1062,2026-10-01,4372.2,Bright Stationery,TXN1062 UPI settlement
+TXN1056,2026-09-25,7791.32,Rani Bakery,UPI settlement batch
+TXN1104,2026-11-10,3884.8,Ganesh Sweets,TXN1104 settlement pending
+TXN1088,2026-10-25,-669.96,Ganesh Sweets,TXN1088 refund issued to customer
+TXN1016,2026-08-16,13935.4,Bright Stationery,Card settlement batch
+TXN1038,2026-09-07,22795.57,Om Traders,Credit Card settlement batch
+TXN1090,2026-10-27,5631.83,Sharma Electronics,TXN1090 original sale settlement
+TXN1012,2026-08-12,2590.82,Om Traders,Card settlement batch
+TXN1082,2026-10-21,15651.42,Om Traders,TXN1082 large order settlement
+TXN1026,2026-08-26,17209.97,Kavya Textiles,UPI settlement batch
+TXN1025,2026-08-25,6967.71,Ganesh Sweets,UPI settlement batch
+TXN1029,2026-08-29,21946.28,Verma Pharmacy,UPI settlement batch
+TXN1064,2026-10-03,14691.78,Ganesh Sweets,TXN1064 UPI settlement
+TXN1015,2026-08-15,3383.21,Singh Auto Parts,UPI settlement batch
+TXN1103,2026-11-09,10750.95,Ganesh Sweets,TXN1103 settlement pending
+TXN1074,2026-10-13,6331.11,Nova Fashion Hub,UPI settlement batch 8
+TXN1030,2026-08-30,16489.34,Singh Auto Parts,NEFT settlement batch
+TXN1005,2026-08-05,2614.27,Sharma Electronics,NEFT settlement batch
+TXN1101,2026-11-07,1810.59,Verma Pharmacy,TXN1101 settlement pending
+TXN1055,2026-09-24,12374.92,Rani Bakery,UPI settlement batch
+TXN1102,2026-11-08,1729.05,Bright Stationery,TXN1102 settlement pending
+TXN1096,2026-11-02,524.79,Local Mart,TXN1096 settlement
+TXN1093,2026-10-30,10443.48,Om Traders,TXN1093 settlement
+TXN1066,2026-10-05,4545.61,Ganesh Sweets,Wire settlement batch 0
+TXN1078,2026-10-17,1867.72,Singh Auto Parts,TXN1078 settlement
+TXN1003,2026-08-03,18490.84,Ganesh Sweets,UPI settlement batch
+TXN1004,2026-08-04,14885.17,Kavya Textiles,UPI settlement batch
+TXN1044,2026-09-13,25893.0,Kavya Textiles,Corporate Card settlement batch
+TXN1068,2026-10-07,17967.25,Singh Auto Parts,Wire settlement batch 2
+TXN1033,2026-09-02,16399.83,Bright Stationery,Credit Card settlement batch
+TXN1047,2026-09-16,22650.9,Verma Pharmacy,Debit Card settlement batch
+TXN1079,2026-10-18,5637.31,Singh Auto Parts,TXN1079 settlement
+TXN1022,2026-08-22,6894.35,Om Traders,NEFT settlement batch
+TXN1014,2026-08-14,20236.07,Nova Fashion Hub,NEFT settlement batch
+TXN1084,2026-10-22,4140.29,Singh Auto Parts,TXN1084 settlement
+TXN1019,2026-08-19,21426.35,Om Traders,Card settlement batch
+TXN1018,2026-08-18,16633.2,Local Mart,UPI settlement batch
+TXN1076,2026-10-15,4023.46,Nova Fashion Hub,TXN1076 settlement
+TXN1058,2026-09-27,18410.62,Bright Stationery,UPI settlement batch
+TXN1049,2026-09-18,5165.65,Kavya Textiles,Corporate Card settlement batch
+TXN1008,2026-08-08,5744.88,Bright Stationery,Card settlement batch
+TXN1071,2026-10-10,14913.56,Sharma Electronics,Wire settlement batch 5
+TXN1098,2026-11-04,14842.06,Ganesh Sweets,TXN1098 settlement
+TXN1007,2026-08-07,17985.68,Ganesh Sweets,Card settlement batch
+TXN1063,2026-10-02,2199.15,Nova Fashion Hub,TXN1063 UPI settlement
+TXN1060,2026-09-29,2681.42,Verma Pharmacy,UPI settlement batch
+TXN1036,2026-09-05,29921.11,Rani Bakery,UPI settlement batch
+TXN1053,2026-09-22,17475.11,Local Mart,UPI settlement batch
+TXN1043,2026-09-12,16108.87,Ganesh Sweets,Credit Card settlement batch
+TXN1001,2026-08-01,16093.84,Kavya Textiles,NEFT settlement batch
+TXN1072,2026-10-11,676.18,Kavya Textiles,UPI settlement batch 6
+TXN1042,2026-09-11,11757.77,Nova Fashion Hub,Debit Card settlement batch
+TXN1052,2026-09-21,10399.79,Om Traders,UPI settlement batch
+TXN1040,2026-09-09,23866.34,Singh Auto Parts,International Card settlement batch
+TXN1020,2026-08-20,7165.95,Verma Pharmacy,UPI settlement batch
+TXN1046,2026-09-15,20610.46,Ganesh Sweets,UPI settlement batch
+TXN1035,2026-09-04,12282.31,Sharma Electronics,International Card settlement batch
+TXN1100,2026-11-06,19468.06,Bright Stationery,TXN1100 settlement
+TXN1057,2026-09-26,11017.89,Ganesh Sweets,UPI settlement batch
+TXN1021,2026-08-21,9443.47,Sharma Electronics,NEFT settlement batch
+TXN1037,2026-09-06,15531.03,Om Traders,Debit Card settlement batch
+TXN1048,2026-09-17,3790.79,Singh Auto Parts,Credit Card settlement batch
+TXN1106,2026-11-12,1973.21,Om Traders,TXN1106 settlement pending
+TXN1009,2026-08-09,20292.93,Kavya Textiles,UPI settlement batch
+TXN1045,2026-09-14,20568.36,Om Traders,International Card settlement batch
+TXN1087,2026-10-24,-2327.03,Ganesh Sweets,TXN1087 refund issued to customer
+TXN1089,2026-10-26,-4212.93,Om Traders,TXN1089 refund issued to customer
+TXN1065,2026-10-04,2797.48,Nova Fashion Hub,TXN1065 UPI settlement
+TXN1028,2026-08-28,6913.2,Sharma Electronics,NEFT settlement batch
+TXN1069,2026-10-08,11233.45,Ganesh Sweets,Card settlement batch 3
+TXN1081,2026-10-20,19746.64,Om Traders,TXN1081 large order settlement
+TXN1013,2026-08-13,21233.11,Bright Stationery,Card settlement batch
+TXN1097,2026-11-03,9637.17,Nova Fashion Hub,TXN1097 settlement
+TXN1099,2026-11-05,11273.41,Sharma Electronics,TXN1099 settlement
+TXN1002,2026-08-02,7093.22,Sharma Electronics,UPI settlement batch
+TXN1010,2026-08-10,17544.04,Verma Pharmacy,Card settlement batch
+TXN1091,2026-10-28,1831.56,Nova Fashion Hub,TXN1091 original sale settlement
+TXN1059,2026-09-28,6821.04,Kavya Textiles,UPI settlement batch
+TXN1039,2026-09-08,5008.82,Rani Bakery,Corporate Card settlement batch
+TXN1083,2026-10-22,2331.46,Singh Auto Parts,TXN1083 settlement
+TXN1092,2026-10-29,6035.62,Kavya Textiles,TXN1092 settlement
+TXN1017,2026-08-17,14560.6,Om Traders,UPI settlement batch
+TXN1051,2026-09-20,19451.82,Rani Bakery,UPI settlement batch
+TXN1094,2026-10-31,10878.09,Rani Bakery,TXN1094 settlement
+TXN1031,2026-08-31,14036.13,Local Mart,UPI settlement batch
+TXN1095,2026-11-01,2393.33,Sharma Electronics,TXN1095 settlement
+TXN1086,2026-10-23,4238.4,Om Traders,TXN1086 settlement
+TXN1027,2026-08-27,20598.52,Verma Pharmacy,Card settlement batch
+TXN1034,2026-09-03,13138.8,Bright Stationery,Corporate Card settlement batch
+TXN1041,2026-09-10,18094.07,Singh Auto Parts,UPI settlement batch
+TXN1067,2026-10-06,24126.89,Ganesh Sweets,Wire settlement batch 1
+TXN1073,2026-10-12,22682.79,Verma Pharmacy,UPI settlement batch 7
+TXN1105,2026-11-11,2222.4,Rani Bakery,TXN1105 settlement pending
+TXN1085,2026-10-23,2284.42,Om Traders,TXN1085 settlement
+TXN1054,2026-09-23,16912.55,Ganesh Sweets,UPI settlement batch
+TXN1011,2026-08-11,4140.34,Verma Pharmacy,UPI settlement batch
+TXN1080,2026-10-19,11472.39,Kavya Textiles,TXN1080 large order settlement
+TXN1006,2026-08-06,15169.86,Ganesh Sweets,UPI settlement batch
+TXN1077,2026-10-16,12208.71,Sharma Electronics,TXN1077 settlement
+TXN1075,2026-10-14,3741.64,Bright Stationery,Wire settlement batch 9
+TXN1032,2026-09-01,4619.09,Ganesh Sweets,Debit Card settlement batch

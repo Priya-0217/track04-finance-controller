@@ -1,0 +1,112 @@
+settlement_ref,date,amount,merchant,description
+STL1110-X,2026-11-15,1399.15,Unknown Merchant Ref,Unmatched incoming credit
+STL1002,2026-08-02,7093.22,Sharma Electronics,Payout ref includes TXN1002 settled
+STL1006,2026-08-06,15169.86,Ganesh Sweets,Payout ref includes TXN1006 settled
+STL1105,2026-11-04,9876.91,Ganesh Sweets,TXN1098 payout adjusted
+STL1060,2026-10-03,2681.42,Verma Pharmacy,Payout cycle batch settled
+STL1048,2026-09-17,3701.77,Singh Auto Parts,Gateway settlement ref 1048
+STL1070,2026-10-09,6573.69,Om Traders,Funds credited for prior batch cycle
+STL1019,2026-08-19,21426.35,Om Traders,TXN1019 payout confirmed
+STL1081B,2026-10-17,1867.72,Singh Auto Parts,TXN1078 payout confirmed (duplicate notice)
+STL1018,2026-08-18,16633.2,Local Mart,Payout ref includes TXN1018 settled
+STL1041,2026-09-10,18094.07,Singh Auto Parts,Gateway settlement ref 1041
+STL1050,2026-09-19,27446.58,Local Mart,Gateway settlement ref 1050
+STL1015,2026-08-15,3383.21,Singh Auto Parts,TXN1015 payout confirmed
+STL1098-CB,2026-11-07,-1831.56,Nova Fashion Hub,Chargeback reversal for TXN1091
+STL1016,2026-08-16,13935.4,Bright Stationery,Payout ref includes TXN1016 settled
+STL1056,2026-09-28,7791.32,Rani Bakery,Payout cycle batch settled
+STL1067,2026-10-06,24126.89,Ganesh Sweets,Payout settled against outstanding invoice
+STL1091-LUMP,2026-10-23,6522.82,Om Traders,Combined payout for TXN1085 and TXN1086
+STL1069,2026-10-08,11233.45,Ganesh Sweets,Funds credited for prior batch cycle
+STL1077B,2026-10-15,4023.46,Nova Fashion Hub,TXN1076 payout confirmed (duplicate notice)
+STL1090-LUMP,2026-10-22,6471.75,Singh Auto Parts,Combined payout for TXN1083 and TXN1084
+STL1076,2026-10-15,4023.46,Nova Fashion Hub,TXN1076 payout confirmed
+STL1068,2026-10-07,17967.25,Singh Auto Parts,Bank transfer completed for recent order set
+STL1042,2026-09-11,11632.9,Nova Fashion Hub,Gateway settlement ref 1042
+STL1010,2026-08-10,17544.04,Verma Pharmacy,Payout ref includes TXN1010 settled
+STL1044,2026-09-13,25022.22,Kavya Textiles,Gateway settlement ref 1044
+STL1064,2026-10-03,14691.8,Ganesh Sweets,TXN1064 payout confirmed
+STL1101,2026-10-31,10878.09,Rani  Bakery,TXN1094 payout confirmed
+STL1089-P2,2026-10-21,8612.49,Om Traders,TXN1082 partial payout 2 of 2
+STL1011,2026-08-11,4140.34,Verma Pharmacy,TXN1011 payout confirmed
+STL1099,2026-10-29,6035.62, kavya textiles ,TXN1092 payout confirmed
+STL1022,2026-08-22,6894.35,Om Traders,Payout ref includes TXN1022 settled
+STL1084-P1,2026-10-19,6133.98,Kavya Textiles,TXN1080 partial payout 1 of 2
+STL1078,2026-10-16,12208.71,Sharma Electronics,TXN1077 payout confirmed
+STL1024,2026-08-24,6346.83,Nova Fashion Hub,Payout ref includes TXN1024 settled
+STL1065,2026-10-04,2797.52,Nova Fashion Hub,TXN1065 payout confirmed
+STL1109-X,2026-11-14,2264.03,Unknown Merchant Ref,Unmatched incoming credit
+STL1034,2026-09-03,12696.94,Bright Stationery,Gateway settlement ref 1034
+STL1001,2026-08-01,16093.84,Kavya Textiles,TXN1001 payout confirmed
+STL1085-P2,2026-10-19,5338.41,Kavya Textiles,TXN1080 partial payout 2 of 2
+STL1062,2026-10-01,4372.24,Bright Stationery,TXN1062 payout confirmed
+STL1058,2026-09-29,18410.62,Bright Stationery,Payout cycle batch settled
+STL1013,2026-08-13,21233.11,Bright Stationery,TXN1013 payout confirmed
+STL1037,2026-09-06,15366.09,Om Traders,Gateway settlement ref 1037
+STL1074,2026-10-13,6331.11,Nova Fashion Hub,Settlement finalized for pending batch
+STL1063,2026-10-02,2199.18,Nova Fashion Hub,TXN1063 payout confirmed
+STL1033,2026-09-02,16014.73,Bright Stationery,Gateway settlement ref 1033
+STL1055,2026-09-26,12374.92,Rani Bakery,Payout cycle batch settled
+STL1054,2026-09-24,16912.55,Ganesh Sweets,Payout cycle batch settled
+STL1087-P2,2026-10-20,11608.6,Om Traders,TXN1081 partial payout 2 of 2
+STL1051,2026-09-21,19451.82,Rani Bakery,Payout cycle batch settled
+STL1047,2026-09-16,22410.35,Verma Pharmacy,Gateway settlement ref 1047
+STL1093,2026-10-25,-669.96,Ganesh Sweets,TXN1088 refund debit confirmed
+STL1028,2026-08-28,6913.2,Sharma Electronics,Payout ref includes TXN1028 settled
+STL1039,2026-09-08,4840.37,Rani Bakery,Gateway settlement ref 1039
+STL1007,2026-08-07,17985.68,Ganesh Sweets,TXN1007 payout confirmed
+STL1003,2026-08-03,18490.84,Ganesh Sweets,TXN1003 payout confirmed
+STL1083B,2026-10-18,5637.31,Singh Auto Parts,TXN1079 payout confirmed (duplicate notice)
+STL1038,2026-09-07,22260.29,Om Traders,Gateway settlement ref 1038
+STL1012,2026-08-12,2590.82,Om Traders,Payout ref includes TXN1012 settled
+STL1017,2026-08-17,14560.6,Om Traders,TXN1017 payout confirmed
+STL1057,2026-09-27,11017.89,Ganesh Sweets,Payout cycle batch settled
+STL1008,2026-08-08,5744.88,Bright Stationery,Payout ref includes TXN1008 settled
+STL1075,2026-10-14,3741.64,Bright Stationery,Merchant credit posted for weekly cycle
+STL1103,2026-11-02,524.79,Local Mart ,TXN1096 payout confirmed
+STL1073,2026-10-12,22682.79,Verma Pharmacy,Settlement finalized for pending batch
+STL1066,2026-10-05,4545.61,Ganesh Sweets,Merchant credit posted for weekly cycle
+STL1079B,2026-10-16,12208.71,Sharma Electronics,TXN1077 payout confirmed (duplicate notice)
+STL1071,2026-10-10,14913.56,Sharma Electronics,Payout settled against outstanding invoice
+STL1009,2026-08-09,20292.93,Kavya Textiles,TXN1009 payout confirmed
+STL1036,2026-09-05,29921.11,Rani Bakery,Gateway settlement ref 1036
+STL1092,2026-10-24,-2327.03,Ganesh Sweets,TXN1087 refund debit confirmed
+STL1052,2026-09-23,10399.79,Om Traders,Payout cycle batch settled
+STL1025,2026-08-25,6967.71,Ganesh Sweets,TXN1025 payout confirmed
+STL1094,2026-10-26,-4212.93,Om Traders,TXN1089 refund debit confirmed
+STL1082,2026-10-18,5637.31,Singh Auto Parts,TXN1079 payout confirmed
+STL1030,2026-08-30,16489.34,Singh Auto Parts,Payout ref includes TXN1030 settled
+STL1040,2026-09-09,22872.4,Singh Auto Parts,Gateway settlement ref 1040
+STL1045,2026-09-14,19710.63,Om Traders,Gateway settlement ref 1045
+STL1059,2026-10-01,6821.04,Kavya Textiles,Payout cycle batch settled
+STL1026,2026-08-26,17209.97,Kavya Textiles,Payout ref includes TXN1026 settled
+STL1029,2026-08-29,21946.28,Verma Pharmacy,TXN1029 payout confirmed
+STL1061,2026-09-30,13302.09,Local Mart,TXN1061 payout confirmed
+STL1005,2026-08-05,2614.27,Sharma Electronics,TXN1005 payout confirmed
+STL1049,2026-09-18,4991.93,Kavya Textiles,Gateway settlement ref 1049
+STL1106,2026-11-05,6472.93,Sharma Electronics,TXN1099 payout adjusted
+STL1097,2026-10-28,1831.56,Nova Fashion Hub,TXN1091 payout confirmed
+STL1035,2026-09-04,11766.79,Sharma Electronics,Gateway settlement ref 1035
+STL1108-X,2026-11-13,5564.09,Unknown Merchant Ref,Unmatched incoming credit
+STL1107,2026-11-06,13314.87,Bright Stationery,TXN1100 payout adjusted
+STL1095,2026-10-27,5631.83,Sharma Electronics,TXN1090 payout confirmed
+STL1043,2026-09-12,15730.6,Ganesh Sweets,Gateway settlement ref 1043
+STL1104,2026-11-03,5505.83,Nova Fashion Hub,TXN1097 payout adjusted
+STL1004,2026-08-04,14885.17,Kavya Textiles,Payout ref includes TXN1004 settled
+STL1102,2026-11-01,2393.33,sharma electronics.,TXN1095 payout confirmed
+STL1023,2026-08-23,15983.96,Ganesh Sweets,TXN1023 payout confirmed
+STL1021,2026-08-21,9443.47,Sharma Electronics,TXN1021 payout confirmed
+STL1031,2026-08-31,14036.13,Local Mart,Gateway settlement ref 1031
+STL1020,2026-08-20,7165.95,Verma Pharmacy,Payout ref includes TXN1020 settled
+STL1096-CB,2026-11-06,-5631.83,Sharma Electronics,Chargeback reversal for TXN1090
+STL1080,2026-10-17,1867.72,Singh Auto Parts,TXN1078 payout confirmed
+STL1053,2026-09-25,17475.11,Local Mart,Payout cycle batch settled
+STL1072,2026-10-11,676.18,Kavya Textiles,Funds credited for prior batch cycle
+STL1100,2026-10-30,10443.48,OM TRADERS,TXN1093 payout confirmed
+STL1111-X,2026-11-16,7177.15,Unknown Merchant Ref,Unmatched incoming credit
+STL1014,2026-08-14,20236.07,Nova Fashion Hub,Payout ref includes TXN1014 settled
+STL1086-P1,2026-10-20,8138.04,Om Traders,TXN1081 partial payout 1 of 2
+STL1032,2026-09-01,4570.04,Ganesh Sweets,Gateway settlement ref 1032
+STL1088-P1,2026-10-21,7038.93,Om Traders,TXN1082 partial payout 1 of 2
+STL1027,2026-08-27,20598.52,Verma Pharmacy,TXN1027 payout confirmed
+STL1046,2026-09-15,20610.46,Ganesh Sweets,Gateway settlement ref 1046

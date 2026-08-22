@@ -1,0 +1,90 @@
+ledger_txn_id,settlement_payout_ref,merchant_id,gross,fee,net,tier,confidence
+TXN1023,STL1023,Ganesh Sweets,15983.96,0.0,15983.96,tier1_exact_id,1.0
+TXN1024,STL1024,Nova Fashion Hub,6346.83,0.0,6346.83,tier1_exact_id,1.0
+TXN1061,STL1061,Local Mart,13302.09,0.0,13302.09,tier1_exact_id,1.0
+TXN1062,STL1062,Bright Stationery,4372.24,0.0,4372.24,tier1_exact_id,1.0
+TXN1088,STL1093,Ganesh Sweets,-669.96,0.0,-669.96,tier1_exact_id,1.0
+TXN1016,STL1016,Bright Stationery,13935.4,0.0,13935.4,tier1_exact_id,1.0
+TXN1090,STL1095,Sharma Electronics,5631.83,0.0,5631.83,tier1_exact_id,1.0
+TXN1012,STL1012,Om Traders,2590.82,0.0,2590.82,tier1_exact_id,1.0
+TXN1026,STL1026,Kavya Textiles,17209.97,0.0,17209.97,tier1_exact_id,1.0
+TXN1025,STL1025,Ganesh Sweets,6967.71,0.0,6967.71,tier1_exact_id,1.0
+TXN1029,STL1029,Verma Pharmacy,21946.28,0.0,21946.28,tier1_exact_id,1.0
+TXN1064,STL1064,Ganesh Sweets,14691.8,0.0,14691.8,tier1_exact_id,1.0
+TXN1015,STL1015,Singh Auto Parts,3383.21,0.0,3383.21,tier1_exact_id,1.0
+TXN1030,STL1030,Singh Auto Parts,16489.34,0.0,16489.34,tier1_exact_id,1.0
+TXN1005,STL1005,Sharma Electronics,2614.27,0.0,2614.27,tier1_exact_id,1.0
+TXN1096,STL1103,Local Mart,524.79,0.0,524.79,tier1_exact_id,1.0
+TXN1093,STL1100,Om Traders,10443.48,0.0,10443.48,tier1_exact_id,1.0
+TXN1078,STL1081B,Singh Auto Parts,1867.72,0.0,1867.72,tier1_exact_id,1.0
+TXN1003,STL1003,Ganesh Sweets,18490.84,0.0,18490.84,tier1_exact_id,1.0
+TXN1004,STL1004,Kavya Textiles,14885.17,0.0,14885.17,tier1_exact_id,1.0
+TXN1079,STL1083B,Singh Auto Parts,5637.31,0.0,5637.31,tier1_exact_id,1.0
+TXN1022,STL1022,Om Traders,6894.35,0.0,6894.35,tier1_exact_id,1.0
+TXN1014,STL1014,Nova Fashion Hub,20236.07,0.0,20236.07,tier1_exact_id,1.0
+TXN1019,STL1019,Om Traders,21426.35,0.0,21426.35,tier1_exact_id,1.0
+TXN1018,STL1018,Local Mart,16633.2,0.0,16633.2,tier1_exact_id,1.0
+TXN1076,STL1077B,Nova Fashion Hub,4023.46,0.0,4023.46,tier1_exact_id,1.0
+TXN1008,STL1008,Bright Stationery,5744.88,0.0,5744.88,tier1_exact_id,1.0
+TXN1007,STL1007,Ganesh Sweets,17985.68,0.0,17985.68,tier1_exact_id,1.0
+TXN1063,STL1063,Nova Fashion Hub,2199.18,0.0,2199.18,tier1_exact_id,1.0
+TXN1001,STL1001,Kavya Textiles,16093.84,0.0,16093.84,tier1_exact_id,1.0
+TXN1020,STL1020,Verma Pharmacy,7165.95,0.0,7165.95,tier1_exact_id,1.0
+TXN1021,STL1021,Sharma Electronics,9443.47,0.0,9443.47,tier1_exact_id,1.0
+TXN1009,STL1009,Kavya Textiles,20292.93,0.0,20292.93,tier1_exact_id,1.0
+TXN1087,STL1092,Ganesh Sweets,-2327.03,0.0,-2327.03,tier1_exact_id,1.0
+TXN1089,STL1094,Om Traders,-4212.93,0.0,-4212.93,tier1_exact_id,1.0
+TXN1065,STL1065,Nova Fashion Hub,2797.52,0.0,2797.52,tier1_exact_id,1.0
+TXN1028,STL1028,Sharma Electronics,6913.2,0.0,6913.2,tier1_exact_id,1.0
+TXN1013,STL1013,Bright Stationery,21233.11,0.0,21233.11,tier1_exact_id,1.0
+TXN1002,STL1002,Sharma Electronics,7093.22,0.0,7093.22,tier1_exact_id,1.0
+TXN1010,STL1010,Verma Pharmacy,17544.04,0.0,17544.04,tier1_exact_id,1.0
+TXN1091,STL1097,Nova Fashion Hub,1831.56,0.0,1831.56,tier1_exact_id,1.0
+TXN1092,STL1099,Kavya Textiles,6035.62,0.0,6035.62,tier1_exact_id,1.0
+TXN1017,STL1017,Om Traders,14560.6,0.0,14560.6,tier1_exact_id,1.0
+TXN1094,STL1101,Rani Bakery,10878.09,0.0,10878.09,tier1_exact_id,1.0
+TXN1095,STL1102,Sharma Electronics,2393.33,0.0,2393.33,tier1_exact_id,1.0
+TXN1027,STL1027,Verma Pharmacy,20598.52,0.0,20598.52,tier1_exact_id,1.0
+TXN1011,STL1011,Verma Pharmacy,4140.34,0.0,4140.34,tier1_exact_id,1.0
+TXN1006,STL1006,Ganesh Sweets,15169.86,0.0,15169.86,tier1_exact_id,1.0
+TXN1077,STL1078,Sharma Electronics,12208.71,0.0,12208.71,tier1_exact_id,1.0
+TXN1050,STL1050,Local Mart,27446.58,0.0,27446.58,tier2_fuzzy_tolerance,0.95
+TXN1056,STL1056,Rani Bakery,7791.32,0.0,7791.32,tier2_fuzzy_tolerance,0.95
+TXN1038,STL1038,Om Traders,22260.29,0.0,22260.29,tier2_fuzzy_tolerance,0.95
+TXN1055,STL1055,Rani Bakery,12374.92,0.0,12374.92,tier2_fuzzy_tolerance,0.95
+TXN1044,STL1044,Kavya Textiles,25022.22,0.0,25022.22,tier2_fuzzy_tolerance,0.95
+TXN1033,STL1033,Bright Stationery,16014.73,0.0,16014.73,tier2_fuzzy_tolerance,0.95
+TXN1047,STL1047,Verma Pharmacy,22410.35,0.0,22410.35,tier2_fuzzy_tolerance,0.95
+TXN1058,STL1058,Bright Stationery,18410.62,0.0,18410.62,tier2_fuzzy_tolerance,0.95
+TXN1049,STL1049,Kavya Textiles,4991.93,0.0,4991.93,tier2_fuzzy_tolerance,0.95
+TXN1060,STL1060,Verma Pharmacy,2681.42,0.0,2681.42,tier2_fuzzy_tolerance,0.95
+TXN1053,STL1053,Local Mart,17475.11,0.0,17475.11,tier2_fuzzy_tolerance,0.95
+TXN1043,STL1043,Ganesh Sweets,15730.6,0.0,15730.6,tier2_fuzzy_tolerance,0.95
+TXN1042,STL1042,Nova Fashion Hub,11632.9,0.0,11632.9,tier2_fuzzy_tolerance,0.95
+TXN1052,STL1052,Om Traders,10399.79,0.0,10399.79,tier2_fuzzy_tolerance,0.95
+TXN1040,STL1040,Singh Auto Parts,22872.4,0.0,22872.4,tier2_fuzzy_tolerance,0.95
+TXN1035,STL1035,Sharma Electronics,11766.79,0.0,11766.79,tier2_fuzzy_tolerance,0.95
+TXN1057,STL1057,Ganesh Sweets,11017.89,0.0,11017.89,tier2_fuzzy_tolerance,0.95
+TXN1037,STL1037,Om Traders,15366.09,0.0,15366.09,tier2_fuzzy_tolerance,0.95
+TXN1048,STL1048,Singh Auto Parts,3701.77,0.0,3701.77,tier2_fuzzy_tolerance,0.95
+TXN1045,STL1045,Om Traders,19710.63,0.0,19710.63,tier2_fuzzy_tolerance,0.95
+TXN1059,STL1059,Kavya Textiles,6821.04,0.0,6821.04,tier2_fuzzy_tolerance,0.95
+TXN1039,STL1039,Rani Bakery,4840.37,0.0,4840.37,tier2_fuzzy_tolerance,0.95
+TXN1051,STL1051,Rani Bakery,19451.82,0.0,19451.82,tier2_fuzzy_tolerance,0.95
+TXN1034,STL1034,Bright Stationery,12696.94,0.0,12696.94,tier2_fuzzy_tolerance,0.95
+TXN1054,STL1054,Ganesh Sweets,16912.55,0.0,16912.55,tier2_fuzzy_tolerance,0.95
+TXN1032,STL1032,Ganesh Sweets,4570.04,0.0,4570.04,tier2_fuzzy_tolerance,0.95
+TXN1070,STL1070,Om Traders,6573.69,0.0,6573.69,tier3_semantic_vector,0.82
+TXN1074,STL1074,Nova Fashion Hub,6331.11,0.0,6331.11,tier3_semantic_vector,0.84
+TXN1066,STL1066,Ganesh Sweets,4545.61,0.0,4545.61,tier3_semantic_vector,0.8
+TXN1068,STL1068,Singh Auto Parts,17967.25,0.0,17967.25,tier3_semantic_vector,0.8
+TXN1071,STL1071,Sharma Electronics,14913.56,0.0,14913.56,tier3_semantic_vector,0.81
+TXN1036,STL1036,Rani Bakery,29921.11,0.0,29921.11,tier3_semantic_vector,0.84
+TXN1072,STL1072,Kavya Textiles,676.18,0.0,676.18,tier3_semantic_vector,0.82
+TXN1046,STL1046,Ganesh Sweets,20610.46,0.0,20610.46,tier3_semantic_vector,0.84
+TXN1069,STL1069,Ganesh Sweets,11233.45,0.0,11233.45,tier3_semantic_vector,0.82
+TXN1031,STL1031,Local Mart,14036.13,0.0,14036.13,tier3_semantic_vector,0.84
+TXN1041,STL1041,Singh Auto Parts,18094.07,0.0,18094.07,tier3_semantic_vector,0.84
+TXN1067,STL1067,Ganesh Sweets,24126.89,0.0,24126.89,tier3_semantic_vector,0.81
+TXN1073,STL1073,Verma Pharmacy,22682.79,0.0,22682.79,tier3_semantic_vector,0.84
+TXN1075,STL1075,Bright Stationery,3741.64,0.0,3741.64,tier3_semantic_vector,0.8

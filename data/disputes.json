@@ -1,0 +1,22 @@
+[
+  {
+    "dispute_id": "disp_001",
+    "merchant_id": "merch_002",
+    "payout_ref": "pay_s_0088",
+    "amount": 7500.0,
+    "reason": "Customer claimed product not received",
+    "status": "resolved_won",
+    "evidence_due_date": "2026-08-28",
+    "holdback_active": false
+  },
+  {
+    "dispute_id": "disp_002",
+    "merchant_id": "merch_001",
+    "payout_ref": "pay_s_0092",
+    "amount": 25000.0,
+    "reason": "Duplicate transaction authorization reported by issuing bank",
+    "status": "merchant_evidence_submitted",
+    "evidence_due_date": "2026-08-25",
+    "holdback_active": true
+  }
+]

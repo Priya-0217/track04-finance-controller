@@ -1,0 +1,510 @@
+{
+  "exact_matches": [
+    {
+      "ledger_id": "txn_l_0001",
+      "settlement_id": "pay_s_0001",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0002",
+      "settlement_id": "pay_s_0002",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0003",
+      "settlement_id": "pay_s_0003",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0004",
+      "settlement_id": "pay_s_0004",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0005",
+      "settlement_id": "pay_s_0005",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0006",
+      "settlement_id": "pay_s_0006",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0007",
+      "settlement_id": "pay_s_0007",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0008",
+      "settlement_id": "pay_s_0008",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0009",
+      "settlement_id": "pay_s_0009",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0010",
+      "settlement_id": "pay_s_0010",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0011",
+      "settlement_id": "pay_s_0011",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0012",
+      "settlement_id": "pay_s_0012",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0013",
+      "settlement_id": "pay_s_0013",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0014",
+      "settlement_id": "pay_s_0014",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0015",
+      "settlement_id": "pay_s_0015",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0016",
+      "settlement_id": "pay_s_0016",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0017",
+      "settlement_id": "pay_s_0017",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0018",
+      "settlement_id": "pay_s_0018",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0019",
+      "settlement_id": "pay_s_0019",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0020",
+      "settlement_id": "pay_s_0020",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0021",
+      "settlement_id": "pay_s_0021",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0022",
+      "settlement_id": "pay_s_0022",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0023",
+      "settlement_id": "pay_s_0023",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0024",
+      "settlement_id": "pay_s_0024",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0025",
+      "settlement_id": "pay_s_0025",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0026",
+      "settlement_id": "pay_s_0026",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0027",
+      "settlement_id": "pay_s_0027",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0028",
+      "settlement_id": "pay_s_0028",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0029",
+      "settlement_id": "pay_s_0029",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0030",
+      "settlement_id": "pay_s_0030",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0031",
+      "settlement_id": "pay_s_0031",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0032",
+      "settlement_id": "pay_s_0032",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0033",
+      "settlement_id": "pay_s_0033",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0034",
+      "settlement_id": "pay_s_0034",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0035",
+      "settlement_id": "pay_s_0035",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0036",
+      "settlement_id": "pay_s_0036",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0037",
+      "settlement_id": "pay_s_0037",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0038",
+      "settlement_id": "pay_s_0038",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0039",
+      "settlement_id": "pay_s_0039",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0040",
+      "settlement_id": "pay_s_0040",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0041",
+      "settlement_id": "pay_s_0041",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0042",
+      "settlement_id": "pay_s_0042",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0043",
+      "settlement_id": "pay_s_0043",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0044",
+      "settlement_id": "pay_s_0044",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0045",
+      "settlement_id": "pay_s_0045",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0046",
+      "settlement_id": "pay_s_0046",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0047",
+      "settlement_id": "pay_s_0047",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0048",
+      "settlement_id": "pay_s_0048",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0049",
+      "settlement_id": "pay_s_0049",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0050",
+      "settlement_id": "pay_s_0050",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0051",
+      "settlement_id": "pay_s_0051",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0052",
+      "settlement_id": "pay_s_0052",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0053",
+      "settlement_id": "pay_s_0053",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0054",
+      "settlement_id": "pay_s_0054",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0055",
+      "settlement_id": "pay_s_0055",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0056",
+      "settlement_id": "pay_s_0056",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0057",
+      "settlement_id": "pay_s_0057",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0058",
+      "settlement_id": "pay_s_0058",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0059",
+      "settlement_id": "pay_s_0059",
+      "expected_tier": "tier1_exact_id"
+    },
+    {
+      "ledger_id": "txn_l_0060",
+      "settlement_id": "pay_s_0060",
+      "expected_tier": "tier1_exact_id"
+    }
+  ],
+  "fuzzy_matches": [
+    {
+      "ledger_id": "txn_l_0061",
+      "settlement_id": "pay_s_0061",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0062",
+      "settlement_id": "pay_s_0062",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0063",
+      "settlement_id": "pay_s_0063",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0064",
+      "settlement_id": "pay_s_0064",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0065",
+      "settlement_id": "pay_s_0065",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0066",
+      "settlement_id": "pay_s_0066",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0067",
+      "settlement_id": "pay_s_0067",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0068",
+      "settlement_id": "pay_s_0068",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0069",
+      "settlement_id": "pay_s_0069",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0070",
+      "settlement_id": "pay_s_0070",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0071",
+      "settlement_id": "pay_s_0071",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0072",
+      "settlement_id": "pay_s_0072",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0073",
+      "settlement_id": "pay_s_0073",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0074",
+      "settlement_id": "pay_s_0074",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0075",
+      "settlement_id": "pay_s_0075",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0076",
+      "settlement_id": "pay_s_0076",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0077",
+      "settlement_id": "pay_s_0077",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0078",
+      "settlement_id": "pay_s_0078",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0079",
+      "settlement_id": "pay_s_0079",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    },
+    {
+      "ledger_id": "txn_l_0080",
+      "settlement_id": "pay_s_0080",
+      "expected_tier": "tier2_fuzzy_tolerance"
+    }
+  ],
+  "semantic_matches": [
+    {
+      "ledger_id": "txn_l_0081",
+      "settlement_id": "pay_s_0081",
+      "expected_tier": "tier3_semantic_vector"
+    },
+    {
+      "ledger_id": "txn_l_0082",
+      "settlement_id": "pay_s_0082",
+      "expected_tier": "tier3_semantic_vector"
+    },
+    {
+      "ledger_id": "txn_l_0083",
+      "settlement_id": "pay_s_0083",
+      "expected_tier": "tier3_semantic_vector"
+    },
+    {
+      "ledger_id": "txn_l_0084",
+      "settlement_id": "pay_s_0084",
+      "expected_tier": "tier3_semantic_vector"
+    },
+    {
+      "ledger_id": "txn_l_0085",
+      "settlement_id": "pay_s_0085",
+      "expected_tier": "tier3_semantic_vector"
+    },
+    {
+      "ledger_id": "txn_l_0086",
+      "settlement_id": "pay_s_0086",
+      "expected_tier": "tier3_semantic_vector"
+    },
+    {
+      "ledger_id": "txn_l_0087",
+      "settlement_id": "pay_s_0087",
+      "expected_tier": "tier3_semantic_vector"
+    },
+    {
+      "ledger_id": "txn_l_0088",
+      "settlement_id": "pay_s_0088",
+      "expected_tier": "tier3_semantic_vector"
+    },
+    {
+      "ledger_id": "txn_l_0089",
+      "settlement_id": "pay_s_0089",
+      "expected_tier": "tier3_semantic_vector"
+    },
+    {
+      "ledger_id": "txn_l_0090",
+      "settlement_id": "pay_s_0090",
+      "expected_tier": "tier3_semantic_vector"
+    }
+  ],
+  "exceptions": [
+    {
+      "id": "txn_l_0091",
+      "type": "unmatched_ledger",
+      "reason": "No settlement payout record found in gateway batch"
+    },
+    {
+      "id": "txn_l_0092",
+      "type": "unmatched_ledger",
+      "reason": "No settlement payout record found in gateway batch"
+    },
+    {
+      "id": "txn_l_0093",
+      "type": "unmatched_ledger",
+      "reason": "No settlement payout record found in gateway batch"
+    },
+    {
+      "id": "pay_s_0094",
+      "type": "unmatched_settlement",
+      "reason": "Direct gateway adjustment credit not registered in ERP ledger"
+    },
+    {
+      "id": "pay_s_0095",
+      "type": "unmatched_settlement",
+      "reason": "Direct gateway adjustment credit not registered in ERP ledger"
+    },
+    {
+      "id": "pay_s_0096",
+      "type": "unmatched_settlement",
+      "reason": "Direct gateway adjustment credit not registered in ERP ledger"
+    },
+    {
+      "id": "txn_l_0097",
+      "type": "amount_mismatch",
+      "reason": "Severe amount mismatch: Ledger has INR 25000.0, Settlement has INR 2500.0"
+    },
+    {
+      "id": "txn_l_0098",
+      "type": "amount_mismatch",
+      "reason": "Severe amount mismatch: Ledger has INR 25000.0, Settlement has INR 2500.0"
+    },
+    {
+      "id": "txn_l_0099",
+      "type": "amount_mismatch",
+      "reason": "Severe amount mismatch: Ledger has INR 25000.0, Settlement has INR 2500.0"
+    },
+    {
+      "id": "txn_l_0100",
+      "type": "amount_mismatch",
+      "reason": "Severe amount mismatch: Ledger has INR 25000.0, Settlement has INR 2500.0"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #fafbfc;
+  color: #111827;
+  letter-spacing: -0.011em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum" 1;
+}
+
+.card-box {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.card-box:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Skeleton Loading */
+.skeleton {
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.4s infinite;
+  border-radius: 4px;
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Rich Markdown Typography */
+.markdown-content p { margin-bottom: 0.4rem; line-height: 1.5; }
+.markdown-content p:last-child { margin-bottom: 0; }
+.markdown-content h3 { font-size: 0.85rem; font-weight: 700; color: #111827; margin-top: 0.6rem; margin-bottom: 0.3rem; }
+.markdown-content h4 { font-size: 0.75rem; font-weight: 700; color: #111827; margin-top: 0.5rem; margin-bottom: 0.25rem; }
+.markdown-content ul { list-style-type: disc; margin-left: 1.15rem; margin-bottom: 0.4rem; }
+.markdown-content ol { list-style-type: decimal; margin-left: 1.15rem; margin-bottom: 0.4rem; }
+.markdown-content li { margin-bottom: 0.2rem; }
+.markdown-content table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; margin-bottom: 0.5rem; font-size: 0.72rem; }
+.markdown-content th { background-color: #f3f4f6; border: 1px solid #e5e7eb; padding: 4px 8px; font-family: var(--font-mono); text-align: left; font-weight: 600; }
+.markdown-content td { border: 1px solid #e5e7eb; padding: 4px 8px; }
+.markdown-content code { background-color: #f3f4f6; padding: 1px 4px; border-radius: 3px; font-family: var(--font-mono); font-size: 0.7rem; color: #111827; }
+.markdown-content strong { font-weight: 600; color: #111827; }
+
+/* Dark Markdown Typography */
+.markdown-content-dark p { margin-bottom: 0.4rem; line-height: 1.5; color: #e5e7eb; }
+.markdown-content-dark p:last-child { margin-bottom: 0; }
+.markdown-content-dark h3 { font-size: 0.85rem; font-weight: 700; color: #ffffff; margin-top: 0.6rem; margin-bottom: 0.3rem; }
+.markdown-content-dark h4 { font-size: 0.75rem; font-weight: 700; color: #ffffff; margin-top: 0.5rem; margin-bottom: 0.25rem; }
+.markdown-content-dark ul { list-style-type: disc; margin-left: 1.15rem; margin-bottom: 0.4rem; color: #e5e7eb; }
+.markdown-content-dark ol { list-style-type: decimal; margin-left: 1.15rem; margin-bottom: 0.4rem; color: #e5e7eb; }
+.markdown-content-dark li { margin-bottom: 0.2rem; }
+.markdown-content-dark table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; margin-bottom: 0.5rem; font-size: 0.72rem; }
+.markdown-content-dark th { background-color: #20222a; border: 1px solid #2e303c; padding: 4px 8px; font-family: var(--font-mono); text-align: left; font-weight: 600; color: #f3f4f6; }
+.markdown-content-dark td { border: 1px solid #2e303c; padding: 4px 8px; color: #e5e7eb; }
+.markdown-content-dark code { background-color: #23252e; padding: 1px 4px; border-radius: 3px; font-family: var(--font-mono); font-size: 0.7rem; color: #60a5fa; }
+.markdown-content-dark strong { font-weight: 600; color: #ffffff; }
