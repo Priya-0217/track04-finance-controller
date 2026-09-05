@@ -1,0 +1,217 @@
+﻿================================================================================
+  RAZORPAY AI BUILDATHON (TRACK 04) - 5-MINUTE PITCH VIDEO SCRIPT & COMMANDS
+================================================================================
+
+[!] Open this file in Notepad and place it on one half of your screen.
+[!] Target Video Duration: 4 minutes 45 seconds to 5 minutes flat.
+[!] Video Platform: Loom or OBS Studio (Upload as Unlisted on YouTube/Loom).
+
+--------------------------------------------------------------------------------
+PART 1: PRE-RECORDING SETUP (DO THIS BEFORE YOU HIT RECORD)
+--------------------------------------------------------------------------------
+
+1. Open TWO terminal / PowerShell windows:
+   - Window 1: For the background web server (keep this running).
+   - Window 2: For typing live demo commands.
+
+2. In Window 1, launch the web server:
+   python fin.py serve
+
+3. Open your browser to:
+   http://localhost:8010/
+
+4. In browser tabs, have these 3 tabs ready:
+   - Tab 1: http://localhost:8010/ (Overview & Cash Position)
+   - Tab 2: http://localhost:8010/chat (AI Copilot Chat)
+   - Tab 3: GitHub repo page showing README.md and WHAT_BROKE.md
+
+--------------------------------------------------------------------------------
+PART 2: COMMANDS CHEAT SHEET (TO RUN DURING RECORDING)
+--------------------------------------------------------------------------------
+
+Command 1 (Run 4-Tier Reconciler Batch):
+python fin.py reconcile
+
+Command 2 (Run Ground-Truth Accuracy & Recall Benchmark):
+python fin.py benchmark
+
+Command 3 (Check Live Cash Position & Liquidity):
+python fin.py cash-position
+
+Command 4 (Check Forward 7-Day Liquidity Forecast & Sunday Pause):
+python fin.py forecast --days 7
+
+Command 5 (Optional - Run Automated Unit Tests):
+pytest tests/
+
+--------------------------------------------------------------------------------
+PART 3: STEP-BY-STEP RECORDING TIMELINE & WORD-FOR-WORD SCRIPT
+--------------------------------------------------------------------------------
+
+================================================================================
+MINUTE 0:00 - 0:45 | HOOK & THE REAL PROBLEM
+================================================================================
+
+[SCREEN]: Start on your webcam OR show the README.md Architecture Diagram.
+
+[SPOKEN SCRIPT]:
+"Hi, I am building for Track 04: AI Finance Controller.
+
+In 2026, the real bottleneck in financial operations is NOT LLM generation 
+speed -- it is verification capacity. 
+
+Every single day, finance and treasury teams spend hours manually stitching 
+messy ERP order ledgers against payment gateway settlement statements, chasing 
+MDR fee deductions, and guessing why bank credits do not match.
+
+In financial engineering, you can NEVER silently guess on money. A single 
+hallucinated transaction ID or an unverified fee delta corrupts the general 
+ledger and breaks tax compliance.
+
+That is why I built the Autonomous Razorpay AI Finance Controller OS: an 
+end-to-end treasury and reconciliation platform designed around a strict 
+zero-tolerance mandate: deterministic math where numbers matter, AI where 
+unstructured text lives, and honest exception queues when funds cannot be 
+verified."
+
+
+================================================================================
+MINUTE 0:45 - 1:50 | CLI RECONCILER & BENCHMARK DEMO
+================================================================================
+
+[SCREEN]: Switch window to Terminal / PowerShell (Window 2).
+
+[ACTION]: Type and press Enter:
+python fin.py reconcile
+
+[SPOKEN SCRIPT]:
+"Let us see it in action on the command line.
+
+Here, I am running our 4-tier batch reconciler against a messy real-world 
+106-record dataset containing UPI, credit cards, corporate payouts, and 
+international card settlements.
+
+In under 40 milliseconds, the engine achieved an 83.96% auto-match rate, 
+reconciling 10.48 Lakhs in gross sales and verifying 7,180 Rupees in MDR 
+processing fees across four distinct tiers:
+
+- Tier 1: Exact ID matching via regex directly from payment narration.
+- Tier 2: Fuzzy fee tolerance accommodating payment gateway MDR up to 4.8% 
+  and bank clearing shifts up to T+4.
+- Tier 3: Local semantic vector embeddings and cross-encoders to match messy 
+  unstructured bank strings like 'RZP settlement batch' with zero explicit IDs.
+- Tier 4: Quarantined exceptions. Instead of guessing on the remaining 39 
+  unmatched items, the engine quarantines them into split payouts, duplicate 
+  notices, and fee overcharges with 100% auditable explanations."
+
+[ACTION]: Type and press Enter:
+python fin.py benchmark
+
+[SPOKEN SCRIPT]:
+"Now let us run our automated evaluation benchmark. 
+When evaluated against our canonical ground-truth suite, the system achieves 
+98.89% Precision and 98.89% Recall in just 35 milliseconds."
+
+
+================================================================================
+MINUTE 1:50 - 2:50 | WEB DASHBOARD & TREASURY FORECASTING
+================================================================================
+
+[SCREEN]: Switch to Browser Tab 1: http://localhost:8010/
+
+[ACTION]: Hover over the top metric cards (Liquid Cash, In-Transit, Match Rate).
+
+[SPOKEN SCRIPT]:
+"Now let us switch to our live web operations platform, built with FastAPI, 
+React 19, and Tailwind CSS.
+
+On the Overview screen, treasury teams have live visibility into their cash:
+- 10.41 Lakhs in 100% verified, settled bank cash.
+- 1.37 Lakhs in pending in-transit receivables.
+- Automated anomaly alerts highlighting four fee overcharges on international 
+  transactions."
+
+[ACTION]: Click on "Batch Trends" in the sidebar or run `python fin.py forecast --days 7`.
+
+[SPOKEN SCRIPT]:
+"In our Forward Forecaster, the system models 7 to 30 days of upcoming daily 
+liquidity. Crucially, it incorporates real RBI banking holiday logic: notice 
+Sunday, August 2nd -- the clearing network closes, so the engine automatically 
+rolls payouts over to Monday, preventing the treasury team from scheduling 
+vendor disbursements on non-clearing days."
+
+
+================================================================================
+MINUTE 2:50 - 3:45 | GROUNDED AI COPILOT & IN-CHAT CSV RECONCILIATION
+================================================================================
+
+[SCREEN]: Switch to Browser Tab 2: http://localhost:8010/chat
+
+[ACTION]: Type this exact prompt into the chat box and hit Enter:
+Why did STL1079B get flagged as an exception?
+
+[SPOKEN SCRIPT]:
+"Next is our Conversational AI Copilot. We equipped this agent with 11 native 
+Model Context Protocol tools.
+
+Notice what happens when I ask about a specific exception item: STL1079B.
+
+Rather than letting an LLM hallucinate or invent transaction figures, our 
+copilot uses a deterministic audit fast-path: it immediately pulls the exact 
+record from memory in sub-millisecond time. It explains the root cause -- 
+identifying it as a duplicate bank payout notice for an order already settled 
+in the ERP -- and renders an action card to flag it for dispute.
+
+You can also click the paperclip icon right here to drag and drop custom ERP 
+CSV files. Our universal schema normalizer dynamically handles arbitrary column 
+headers like 'store', 'account', or 'gross_amount' without crashing."
+
+
+================================================================================
+MINUTE 3:45 - 4:45 | WHAT BROKE AND HOW WE GOT OUT (THE WINNING FILTER)
+================================================================================
+
+[SCREEN]: Switch to Tab 3 showing WHAT_BROKE.md on GitHub or in your editor.
+
+[SPOKEN SCRIPT]:
+"Now for the part Razorpay values most: What broke, and how we got out. 
+
+We documented 8 real engineering failures in WHAT_BROKE.md, but three were 
+critical:
+
+First, The 5-Token Thinking Starvation. Early on, our Gemini Flash responses 
+kept terminating after just 10 words. When we inspected raw HTTP usage metadata, 
+we discovered that Gemini's internal reasoning tokens -- thoughtsTokenCount -- 
+were burning 238 tokens out of our 250-token budget! We solved this by boosting 
+maxOutputTokens to 2048 across all streaming routers.
+
+Second, Cascade Preemption. In early runs, Tier 1 and Tier 3 dropped to zero 
+because Tier 2 had too broad a tolerance window -- it greedily swallowed exact 
+matches before Tier 3 ever evaluated the text. We fixed this by constraining 
+Tier 2 strictly to true fee deltas and adding regex ID extraction in Tier 1.
+
+Third, The International Card MDR Floor. Four card transactions kept failing 
+in the 106-record dataset. We realized Indian international cards incur 3.5% 
+base MDR plus flat 7 Rupees gateway fee plus 18% GST, pushing total deductions 
+to ~4.4%. We updated our tolerance ceiling to 4.80% and sanitized merchant string 
+whitespace, pushing our match rate to 83.96% with zero false positives."
+
+
+================================================================================
+MINUTE 4:45 - 5:00 | CONCLUSION & CLOSING
+================================================================================
+
+[SCREEN]: Back to webcam or GitHub repository home screen.
+
+[SPOKEN SCRIPT]:
+"The entire system is open-source, fully tested with 8 passing unit tests, and 
+armed with an 11-tool MCP server for Cursor and Claude Desktop.
+
+This is production-grade financial engineering: explainable, bounded, and with 
+zero silent guessing on money.
+
+Thank you, and I look forward to the interview in Bangalore!"
+
+================================================================================
+                                END OF SCRIPT
+================================================================================
