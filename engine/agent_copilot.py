@@ -490,6 +490,61 @@ class AutonomousFinanceAgent:
                 "action_cards": self._build_action_cards("merchants", "finance_list_merchants", report, merchant_id),
             }
 
+        # FAST-PATH 10: Armed MCP Tools Catalog & Capabilities Inquiry
+        if any(w in msg_lower for w in ("tools", "tool", "capabilities", "what can you do", "what do you have", "help", "mcp")):
+            reply = (
+                "### Armed Model Context Protocol (MCP) Tools Catalog\n\n"
+                "I am equipped with **11 native MCP tools** providing real-time treasury intelligence and autonomous execution:\n\n"
+                "1. `mcp::finance_get_metrics` — Real-time auto-match rate, verified sales volume, and gateway MDR fee drag.\n"
+                "2. `mcp::finance_get_forecast` — 7 to 30-day forward cash trajectory with RBI Sunday clearing pauses.\n"
+                "3. `mcp::finance_auto_audit` — Continuous anomaly detection for contract fee leakage and trapped capital.\n"
+                "4. `mcp::finance_auto_close_loop` — 1-click autonomous books closure with signed SOX audit certificate.\n"
+                "5. `mcp::finance_create_payout` — Instant T+0 vendor and merchant liquidity disbursements.\n"
+                "6. `mcp::finance_list_disputes` — Active chargeback disputes and escrow holdback reserve pool.\n"
+                "7. `mcp::finance_simulate_traffic` — Live transaction simulator with dynamic MDR deductions.\n"
+                "8. `mcp::finance_list_merchants` — Multi-tenant merchant directory, contract fee schedules, and KYC tiers.\n"
+                "9. `mcp::finance_export_report` — SOX compliance PDF and QuickBooks/Xero/Zoho GL journal feeds.\n"
+                "10. `mcp::finance_run_reconciliation` — 4-tier matching cascade across live ledger and settlement batches.\n"
+                "11. `mcp::finance_explain_architecture` — Pipeline algorithms, fee tolerance formulas, and security docs.\n\n"
+                "You can invoke any of these tools via natural language or click the quick action cards below."
+            )
+            return {
+                "reply": reply,
+                "intent": "tool_catalog_inquiry",
+                "tool_called": "finance_explain_architecture",
+                "tokens": 200,
+                "action_cards": [
+                    {
+                        "id": "act_run_rec",
+                        "action_type": "run_reconcile",
+                        "label": "Run Reconciliation",
+                        "description": "Dispatch 4-tier matching engine",
+                        "icon": "Play",
+                    },
+                    {
+                        "id": "act_audit",
+                        "action_type": "run_auto_audit",
+                        "label": "Run Anomaly Audit",
+                        "description": "Scan for fee overcharges & leakage",
+                        "icon": "ShieldAlert",
+                    },
+                    {
+                        "id": "act_forecast",
+                        "action_type": "run_forecast",
+                        "label": "View Cash Forecast",
+                        "description": "7-day forward liquidity projection",
+                        "icon": "TrendingUp",
+                    },
+                    {
+                        "id": "act_close",
+                        "action_type": "auto_close_books",
+                        "label": "Autonomous Close",
+                        "description": "Sign off today's verified ledger",
+                        "icon": "CheckCircle2",
+                    },
+                ],
+            }
+
         return None
 
     async def execute_query_stream(
