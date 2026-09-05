@@ -1,4 +1,4 @@
-﻿# Autonomous Razorpay AI Finance Controller OS
+# Autonomous Razorpay AI Finance Controller OS
 ### Track 04: AI Finance Controller — Razorpay AI Buildathon 2026
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
@@ -19,6 +19,22 @@
 In enterprise finance operations, **verification capacity, not generation speed, is the bottleneck.** Financial operations cannot guess on money. A single fabricated transaction ID or an unverified deduction creates balance sheet discrepancies, breaks tax compliance, and corrupts the general ledger.
 
 The **Autonomous Razorpay AI Finance Controller OS** is an end-to-end treasury and reconciliation platform designed to close the finance-ops loop across messy real-world transaction batches. It combines a deterministic 4-tier matching cascade, automated MDR fee deduction analysis, forward liquidity forecasting, and a mathematically grounded conversational agent.
+
+---
+
+## Platform Interface & Visual Tour
+
+### 1. Financial Treasury & Live Cash Position (`/`)
+Live multi-tier settlement verification across payment rails with real-time liquidity visibility, MDR fee drag tracking, and actionable ML Smart Financial Advisor recommendations:
+![Financial Treasury & Cash Position](assets/screenshots/overview_dashboard.png)
+
+### 2. Forward Cash Forecaster & RBI Bank Holiday Clearing (`/forecast`)
+7 to 30-day forward daily liquidity projections factoring in RBI banking holidays and Sunday bank clearing network pauses:
+![Forward Cash Forecaster](assets/screenshots/cash_forecaster.png)
+
+### 3. Autonomous AI Copilot & Armed MCP Tools (`/chat`)
+Full-context conversational copilot with sub-millisecond audit fast-paths, in-chat CSV reconciliation, and direct access to 11 live Model Context Protocol (MCP) tools:
+![AI Copilot Assistant & Armed MCP Tools](assets/screenshots/ai_copilot_tools.png)
 
 ---
 
