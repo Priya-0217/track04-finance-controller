@@ -1,0 +1,28 @@
+﻿# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+
+# Unit test / coverage
+.pytest_cache/
+.coverage
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Runtime databases & caches
+*.db
+*.sqlite3
+
+# Runtime logs
+*.log

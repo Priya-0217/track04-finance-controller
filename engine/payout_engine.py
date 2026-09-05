@@ -46,35 +46,54 @@ class PayoutEngine:
 
         # 1. Append to ledger.csv
         ledger_path = self.data_dir / "ledger.csv"
-        with open(ledger_path, "a", newline="", encoding="utf-8") as f:
-            writer = csv.writer(f)
-            writer.writerow([
-                txn_id,
-                merchant_id,
-                amount,
-                now.strftime("%Y-%m-%d"),
-                f"ord_{uuid.uuid4().hex[:6]}",
-                description,
-                "INR",
-                customer_name,
-            ])
+        if ledger_path.exists():
+            with open(ledger_path, "r", encoding="utf-8") as f:
+                reader = csv.reader(f)
+                header = next(reader, None) or ["txn_id", "date", "amount", "merchant", "description"]
+            
+            row_map = {
+                "txn_id": txn_id,
+                "date": now.strftime("%Y-%m-%d"),
+                "txn_date": now.strftime("%Y-%m-%d"),
+                "amount": amount,
+                "gross_amount": amount,
+                "merchant": merchant_id,
+                "merchant_id": merchant_id,
+                "description": description,
+                "currency": "INR",
+                "customer_name": customer_name,
+                "order_id": f"ord_{uuid.uuid4().hex[:6]}",
+            }
+            with open(ledger_path, "a", newline="", encoding="utf-8") as f:
+                writer = csv.DictWriter(f, fieldnames=header, extrasaction="ignore")
+                writer.writerow(row_map)
 
         # 2. Append to settlement.csv
         settle_path = self.data_dir / "settlement.csv"
-        with open(settle_path, "a", newline="", encoding="utf-8") as f:
-            writer = csv.writer(f)
-            writer.writerow([
-                payout_ref,
-                merchant_id,
-                amount,
-                base_fee,
-                gst,
-                net_settle,
-                (now + datetime.timedelta(days=1)).strftime("%Y-%m-%d"),
-                utr,
-                f"Settlement for {description}",
-                txn_id,
-            ])
+        if settle_path.exists():
+            with open(settle_path, "r", encoding="utf-8") as f:
+                reader = csv.reader(f)
+                header = next(reader, None) or ["settlement_ref", "date", "amount", "merchant", "description"]
+
+            row_map = {
+                "settlement_ref": payout_ref,
+                "payout_ref": payout_ref,
+                "date": (now + datetime.timedelta(days=1)).strftime("%Y-%m-%d"),
+                "settlement_date": (now + datetime.timedelta(days=1)).strftime("%Y-%m-%d"),
+                "amount": net_settle,
+                "gross_amount": amount,
+                "net_amount": net_settle,
+                "fee_deducted": base_fee,
+                "tax_deducted": gst,
+                "merchant": merchant_id,
+                "merchant_id": merchant_id,
+                "description": f"Settlement for {description} ({txn_id})",
+                "matched_txn_id": txn_id,
+                "utr": utr,
+            }
+            with open(settle_path, "a", newline="", encoding="utf-8") as f:
+                writer = csv.DictWriter(f, fieldnames=header, extrasaction="ignore")
+                writer.writerow(row_map)
 
         return {
             "txn_id": txn_id,

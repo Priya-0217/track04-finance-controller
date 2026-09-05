@@ -143,7 +143,11 @@ def match_tier2_fuzzy(
 
         if best_match and best_idx != -1:
             s = available_settlements.pop(best_idx)
-            expected_deduction = s.fee_deducted + s.tax_deducted
+            fee_val = round(s.fee_deducted + s.tax_deducted, 2)
+            amount_gap = round(l.amount - s.gross_amount, 2)
+            # If explicit fee wasn't in CSV column but amount was deducted by gateway:
+            real_fee = fee_val if fee_val > 0.0 else (amount_gap if amount_gap > 0.0 else 0.0)
+
             matched_results.append(
                 MatchResult(
                     ledger_txn_id=l.txn_id,
@@ -152,8 +156,8 @@ def match_tier2_fuzzy(
                     ledger_amount=l.amount,
                     settlement_gross=s.gross_amount,
                     settlement_net=s.net_amount,
-                    fee_deducted=expected_deduction,
-                    amount_discrepancy=round(l.amount - s.gross_amount, 2),
+                    fee_deducted=real_fee,
+                    amount_discrepancy=amount_gap,
                     match_tier=MatchTier.FUZZY_AMOUNT_DATE,
                     confidence=0.95,
                     explanation=f"Tier 2 Fuzzy match: Verified fee/date tolerance (diff: INR {best_diff:.2f}) settled on {s.settlement_date}.",

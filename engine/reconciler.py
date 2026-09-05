@@ -134,7 +134,10 @@ class ReconciliationEngine:
                     settle_vecs.pop(s_orig_idx)
                     settle_texts.pop(s_orig_idx)
 
-                    expected_deduction = matched_s.fee_deducted + matched_s.tax_deducted
+                    fee_val = round(matched_s.fee_deducted + matched_s.tax_deducted, 2)
+                    amount_gap = round(l.amount - matched_s.gross_amount, 2)
+                    real_fee = fee_val if fee_val > 0.0 else (amount_gap if amount_gap > 0.0 else 0.0)
+
                     t3_matches.append(
                         MatchResult(
                             ledger_txn_id=l.txn_id,
@@ -143,8 +146,8 @@ class ReconciliationEngine:
                             ledger_amount=l.amount,
                             settlement_gross=matched_s.gross_amount,
                             settlement_net=matched_s.net_amount,
-                            fee_deducted=expected_deduction,
-                            amount_discrepancy=round(l.amount - matched_s.gross_amount, 2),
+                            fee_deducted=real_fee,
+                            amount_discrepancy=amount_gap,
                             match_tier=MatchTier.SEMANTIC_EMBEDDING,
                             confidence=best_score,
                             explanation=f"Tier 3 Semantic match (confidence: {best_score:.2f}) on descriptor '{matched_s.description}'.",
@@ -158,8 +161,90 @@ class ReconciliationEngine:
         all_matches.extend(t3_matches)
 
         # ====================================================================
-        # Tier 4: Explicit Exceptions (Never guess on remaining records)
+        # Tier 4: Explicit Differentiated Exceptions (Never guess on money)
         # ====================================================================
+        matched_txn_ids_set = {m.ledger_txn_id for m in all_matches}
+        rem_ledger_ids_map = {l.txn_id: l for l in rem_ledger_3}
+        from engine.matcher_rules import _extract_txn_ref
+
+        # Check remaining settlement records
+        for s in available_settlements:
+            ref_found = _extract_txn_ref(s.payout_ref) or _extract_txn_ref(s.description)
+            desc_lower = (s.description or "").lower()
+
+            if "lump" in desc_lower or "lump" in s.payout_ref.lower():
+                all_exceptions.append(
+                    ExceptionRecord(
+                        record_type="merged_settlement",
+                        source_id=s.payout_ref,
+                        merchant_id=s.merchant_id,
+                        amount=s.gross_amount,
+                        date=s.settlement_date,
+                        description=s.description,
+                        reason=f"Merged lump-sum payout: Bank credit INR {s.gross_amount:,.2f} consolidates multiple ledger sales into a single batch deposit.",
+                        suggested_action="Split lump settlement across constituent ledger order lines to close open receivables.",
+                        risk_level="medium",
+                    )
+                )
+            elif "partial" in desc_lower or "-p1" in s.payout_ref.lower() or "-p2" in s.payout_ref.lower() or "split" in desc_lower:
+                all_exceptions.append(
+                    ExceptionRecord(
+                        record_type="split_settlement",
+                        source_id=s.payout_ref,
+                        merchant_id=s.merchant_id,
+                        amount=s.gross_amount,
+                        date=s.settlement_date,
+                        description=s.description,
+                        reason=f"Split settlement installment for transaction {ref_found or s.payout_ref}: Bank credit INR {s.gross_amount:,.2f} received as part of a multi-tranche payout.",
+                        suggested_action="Aggregate matching split settlement tranches to reconcile full parent ledger balance.",
+                        risk_level="medium",
+                    )
+                )
+            elif ref_found and ref_found in matched_txn_ids_set:
+                all_exceptions.append(
+                    ExceptionRecord(
+                        record_type="duplicate_settlement",
+                        source_id=s.payout_ref,
+                        merchant_id=s.merchant_id,
+                        amount=s.gross_amount,
+                        date=s.settlement_date,
+                        description=s.description,
+                        reason=f"Duplicate settlement payout notice detected for transaction {ref_found} (primary record already matched in ERP).",
+                        suggested_action="Flag duplicate bank payout notice to prevent double-crediting general ledger.",
+                        risk_level="high",
+                    )
+                )
+            elif ref_found and ref_found in rem_ledger_ids_map:
+                l_target = rem_ledger_ids_map[ref_found]
+                diff = abs(l_target.amount - s.gross_amount)
+                all_exceptions.append(
+                    ExceptionRecord(
+                        record_type="wrong_amount_mismatch",
+                        source_id=s.payout_ref,
+                        merchant_id=s.merchant_id,
+                        amount=s.gross_amount,
+                        date=s.settlement_date,
+                        description=s.description,
+                        reason=f"Amount mismatch for transaction {ref_found}: Ledger INR {l_target.amount:,.2f} vs Bank INR {s.gross_amount:,.2f} (diff: INR {diff:,.2f} exceeds tolerance).",
+                        suggested_action="Audit gateway fee contract and initiate merchant discrepancy query.",
+                        risk_level="high",
+                    )
+                )
+            else:
+                all_exceptions.append(
+                    ExceptionRecord(
+                        record_type="unmatched_settlement",
+                        source_id=s.payout_ref,
+                        merchant_id=s.merchant_id,
+                        amount=s.gross_amount,
+                        date=s.settlement_date,
+                        description=s.description,
+                        reason=f"Unmapped incoming bank credit of INR {s.gross_amount:,.2f} with no corresponding ERP ledger order.",
+                        suggested_action="Check if credit is a manual gateway fee adjustment, dispute refund reversal, or direct transfer.",
+                        risk_level="medium",
+                    )
+                )
+
         # Check remaining ledger records
         for l in rem_ledger_3:
             all_exceptions.append(
@@ -170,25 +255,9 @@ class ReconciliationEngine:
                     amount=l.amount,
                     date=l.txn_date,
                     description=l.description,
-                    reason=f"No settlement payout record found within fee/date tolerance window for merchant {l.merchant_id}.",
-                    suggested_action="Verify with payment gateway if payout is pending or withheld in reserve.",
+                    reason=f"In-transit ledger sale for merchant {l.merchant_id} awaiting bank settlement payout beyond clearing window.",
+                    suggested_action="Verify with payment gateway if payout is in-transit or withheld in reserve.",
                     risk_level="medium" if l.amount < 20000 else "high",
-                )
-            )
-
-        # Check remaining settlement records
-        for s in available_settlements:
-            all_exceptions.append(
-                ExceptionRecord(
-                    record_type="unmatched_settlement",
-                    source_id=s.payout_ref,
-                    merchant_id=s.merchant_id,
-                    amount=s.gross_amount,
-                    date=s.settlement_date,
-                    description=s.description,
-                    reason=f"Payout credit of INR {s.gross_amount:.2f} received with no corresponding ledger sale in ERP.",
-                    suggested_action="Check if credit is a manual gateway fee adjustment, dispute refund reversal, or direct transfer.",
-                    risk_level="medium",
                 )
             )
 

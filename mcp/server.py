@@ -39,6 +39,57 @@ payout_engine = PayoutEngine()
 forecaster = ForwardCashForecaster()
 
 
+def _normalize_row_keys(row: dict) -> dict:
+    """Normalize arbitrary CSV column names to standard internal field names."""
+    norm = {}
+    for k, v in row.items():
+        if not k:
+            continue
+        k_clean = str(k).strip().lower().replace(" ", "_").replace("-", "_")
+        norm[k_clean] = v.strip() if isinstance(v, str) else v
+
+    out = {}
+    # 1. Transaction / Payout ID
+    for candidate in ("txn_id", "id", "reference", "ref", "transaction_id", "payout_ref", "settlement_ref"):
+        if candidate in norm and norm[candidate]:
+            out["txn_id"] = norm[candidate]
+            out["payout_ref"] = norm[candidate]
+            break
+
+    # 2. Merchant ID / Name
+    for candidate in ("merchant_id", "merchant", "merch_id", "store", "account"):
+        if candidate in norm and norm[candidate]:
+            out["merchant_id"] = norm[candidate]
+            break
+    if "merchant_id" not in out:
+        out["merchant_id"] = "merch_001"
+
+    # 3. Dates
+    for candidate in ("txn_date", "date", "created_at", "timestamp", "settlement_date"):
+        if candidate in norm and norm[candidate]:
+            out["txn_date"] = norm[candidate]
+            out["settlement_date"] = norm[candidate]
+            break
+
+    # 4. Gross / Net / Amount
+    for candidate in ("gross_amount", "amount", "gross", "total_amount", "net_amount", "net"):
+        if candidate in norm and norm[candidate] != "":
+            try:
+                out["gross_amount"] = float(str(norm[candidate]).replace(",", ""))
+                out["net_amount"] = out["gross_amount"]
+                break
+            except ValueError:
+                pass
+
+    out.setdefault("fee_deducted", 0.0)
+    out.setdefault("tax_deducted", 0.0)
+    out.setdefault("description", norm.get("description", "Standard Settlement"))
+    out.setdefault("payment_method", norm.get("payment_method", "card"))
+    out.setdefault("matched_txn_id", norm.get("matched_txn_id") or None)
+
+    return out
+
+
 def _get_records():
     l_path = DATA_DIR / "ledger.csv"
     s_path = DATA_DIR / "settlement.csv"
@@ -48,22 +99,33 @@ def _get_records():
         save_csv_and_json(DATA_DIR)
 
     with open(l_path, "r", encoding="utf-8") as f:
-        ledger_records = [LedgerRecord(**r) for r in csv.DictReader(f)]
+        ledger_records = [
+            LedgerRecord(
+                txn_id=nr.get("txn_id", f"TXN_{idx:04d}"),
+                merchant_id=nr.get("merchant_id", "merch_001"),
+                amount=float(nr.get("gross_amount", 0.0)),
+                txn_date=nr.get("txn_date", "2026-10-01"),
+                description=nr.get("description", "Card payment"),
+            )
+            for idx, r in enumerate(csv.DictReader(f), start=1)
+            for nr in [_normalize_row_keys(r)]
+        ]
 
     with open(s_path, "r", encoding="utf-8") as f:
         settle_records = [
             SettlementRecord(
-                payout_ref=r["payout_ref"],
-                merchant_id=r["merchant_id"],
-                gross_amount=float(r["gross_amount"]),
-                fee_deducted=float(r["fee_deducted"]),
-                tax_deducted=float(r.get("tax_deducted", 0.0)),
-                net_amount=float(r["net_amount"]),
-                settlement_date=r["settlement_date"],
-                description=r["description"],
-                matched_txn_id=r.get("matched_txn_id") or None,
+                payout_ref=nr.get("payout_ref", f"STL_{idx:04d}"),
+                merchant_id=nr.get("merchant_id", "merch_001"),
+                gross_amount=nr.get("gross_amount", 0.0),
+                fee_deducted=float(nr.get("fee_deducted", 0.0)),
+                tax_deducted=float(nr.get("tax_deducted", 0.0)),
+                net_amount=float(nr.get("net_amount", nr.get("gross_amount", 0.0))),
+                settlement_date=nr.get("settlement_date", "2026-10-01"),
+                description=nr.get("description", "Bank settlement"),
+                matched_txn_id=nr.get("matched_txn_id"),
             )
-            for r in csv.DictReader(f)
+            for idx, r in enumerate(csv.DictReader(f), start=1)
+            for nr in [_normalize_row_keys(r)]
         ]
     return ledger_records, settle_records
 

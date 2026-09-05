@@ -40,14 +40,20 @@ class SmartAdvisor:
         recs: List[SmartRecommendation] = []
 
         # 1. Payment Rail Fee Optimization (UPI AutoPay vs Credit Cards)
+        card_volume = sum(
+            m.ledger_amount for m in report.matches
+            if m.fee_deducted > 0 or "card" in (m.explanation or "").lower() or "tolerance" in (m.explanation or "").lower()
+        )
+        annual_upi_savings = round(card_volume * 0.0195 * 12, 2)
+
         recs.append(
             SmartRecommendation(
                 id="rec_opt_upi",
                 title="Migrate High-Ticket Subscriptions to UPI AutoPay",
                 category="fee_optimization",
                 priority="high",
-                description="Analysis detected ₹3,40,000 processed via Credit Cards at 1.95% MDR. Routing eligible recurring mandates through UPI AutoPay (0.00% MDR) eliminates gateway processing fee drag.",
-                estimated_annual_savings_inr=79560.00,
+                description=f"Analysis detected ₹{card_volume:,.2f} processed via Card payment rails with gateway MDR drag. Routing recurring transactions through UPI AutoPay (0.00% MDR) eliminates ~1.95% in processing fees.",
+                estimated_annual_savings_inr=annual_upi_savings,
                 confidence_score=0.96,
                 action_label="Enable UPI AutoPay Routing",
                 action_type="enable_upi_autopay",
